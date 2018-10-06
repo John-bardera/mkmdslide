@@ -1,0 +1,15 @@
+<ion-header>
+</ion-header>
+
+<ion-content height="40mm">
+  <ion-title class="border-l">
+  <h2 class="narrow">
+    Input MarkDown
+    <button ion-button icon-end (click)="sendPDFData()">Generate</button>
+  </h2>
+</ion-title>
+  <ion-title>Setting Title</ion-title>
+  <ion-textarea elastic [(ngModel)]="setting" placeholder="Write Setting"></ion-textarea>
+  <ion-title>Contents</ion-title>
+  <ion-textarea elastic [(ngModel)]="contents" placeholder="Write MarkDown"></ion-textarea>
+</ion-content>
