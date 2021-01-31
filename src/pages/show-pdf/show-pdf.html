@@ -1,7 +1,12 @@
-<ion-header>
-</ion-header>
-
 <ion-content>
-  <ion-title class="border-l"><h2 class="narrow">View PDF</h2></ion-title>
-  <object [data]="fileUrl" type="application/pdf" width="100%" height="93%"></object>
+  <ion-list class="sp-list">
+    <ion-list-header no-lines no-padding class="sp-header">
+      <button clear ion-item class="sp-button" (click)="toggleSection()" [ngClass]="{'section-active': canView, 'section': !canView}">
+        <ion-icon item-left name="arrow-down" *ngIf="canView"></ion-icon>
+        <ion-icon item-left name="arrow-forward" *ngIf="!canView"></ion-icon>
+        <h2> View PDF </h2>
+      </button>
+    </ion-list-header>
+</ion-list>
+<object [data]="fileUrl" type="application/pdf" width="100%" height="93%"></object>
 </ion-content>

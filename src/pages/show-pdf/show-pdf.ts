@@ -9,6 +9,7 @@ import {SendInputProvider} from "../../providers/send-input/send-input";
 })
 export class ShowPdfPage implements OnInit{
   fileUrl: any;
+  canView: boolean = true;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -22,5 +23,8 @@ export class ShowPdfPage implements OnInit{
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShowPdfPage');
+  }
+  toggleSection() {
+    this.canView = !this.canView;
   }
 }
